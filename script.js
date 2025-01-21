@@ -431,28 +431,244 @@
 
 // console.log(reverse(someString))
 
-const baseCurrencies = ['USD', 'EUR'];
-const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+// const baseCurrencies = ['USD', 'EUR'];
+// const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
 
-function availableCurr(arr, missingCurr) {
-    let str = '';
-    arr.length === 0 ? str = 'Нет доступных валют' : str = 'Доступные валюты:\n';
+// function availableCurr(arr, missingCurr) {
+//     let str = '';
+//     arr.length === 0 ? str = 'Нет доступных валют' : str = 'Доступные валюты:\n';
 
-    arr.forEach(function(curr, i) {
-        if (curr !== missingCurr) {
-            str += `${curr}\n`;
-        }
-    });
+//     arr.forEach(function(curr, i) {
+//         if (curr !== missingCurr) {
+//             str += `${curr}\n`;
+//         }
+//     });
 
-    // Или
-    // for (let i = 0; i < arr.length; i++) {
-    //     if (arr[i] === missingCurr) {
-    //         continue;
-    //     }
-    //     str += `${arr[i]}\n`;
-    // }
+//     // Или
+//     // for (let i = 0; i < arr.length; i++) {
+//     //     if (arr[i] === missingCurr) {
+//     //         continue;
+//     //     }
+//     //     str += `${arr[i]}\n`;
+//     // }
 
-    return str;
-}
+//     return str;
+// }
 
-availableCurr([...baseCurrencies, ...additionalCurrencies], 'CNY')
+// availableCurr([...baseCurrencies, ...additionalCurrencies], 'CNY')
+
+// const shoppingMallData = {
+//     shops: [
+//         {
+//             width: 10,
+//             length: 5
+//         },
+//         {
+//             width: 1,
+//             length: 7
+//         },
+//         {
+//             width: 20,
+//             length: 5
+//         },
+//         {
+//             width: 8,
+//             length: 3
+//         }
+//     ],
+//     height: 5,
+//     moneyPer1m3: 30,
+//     budget: 50000
+// }
+
+// function isBudgetEnough(data) {
+//     let square =0;
+//     let volume = 0;
+//     data.shops.forEach(shop=>{
+//         square+= shop.width*shop.length;
+//     });
+//     volume=square*data.height;
+//     if (data.budget-(volume*data.moneyPer1m3)>=0){
+//         return 'бюджета достаточно';
+//     } else {
+//         return 'бюджета недостаточно';
+//     }
+// }
+// console.log(isBudgetEnough(shoppingMallData))
+
+// const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam'];
+
+// function sortStudentsByGroups(arr) {
+//     arr.sort();
+//     const a =[], b=[], c=[], rest =[];
+//     for (let i=0; i<arr.length; i++){
+//         if(i<3){
+//             a.push(arr[i]);
+//         } else if(i<6){
+//             b.push(arr[i]);
+//         } else if(i<9){
+//             c.push(arr[i]);
+//         } else {
+//             rest.push(arr[i]);
+//         }
+//     }
+//     return [a, b, c, `оставшиеся студенты: ${rest.length===0 ? '-' : rest.join(', ')}`]
+
+// }
+// console.log(sortStudentsByGroups(students))
+
+// const restorantData = {
+//     menu: [
+//         {
+//             name: 'Salad Caesar',
+//             price: '4$'
+//         },
+//         {
+//             name: 'Pizza Diavola',
+//             price: '9$'
+//         },
+//         {
+//             name: 'Beefsteak',
+//             price: '17$'
+//         },
+//         {
+//             name: 'Napoleon',
+//             price: '7$'
+//         }
+//     ],
+//     waitors: [
+//         {name: 'Alice', age: 22}, {name: 'John', age: 24}
+//     ],
+//     averageLunchPrice: '20$',
+//     openNow: true
+// };
+
+// function isOpen(prop) {
+//     let answer = '';
+//     prop ? answer = 'Открыто' : answer = 'Закрыто';
+
+//     return answer;
+// }
+
+// console.log(isOpen(restorantData.openNow))
+
+// function isAverageLunchPriceTrue(fDish, sDish, average) {
+//     if (+fDish.price.slice(0, -1) + (+sDish.price.slice(0, -1)) < +average.slice(0,-1)) {
+//         return 'Цена ниже средней';
+//     } else {
+//         return 'Цена выше средней';
+//     }
+// }
+
+// console.log(isAverageLunchPriceTrue(restorantData.menu[0], restorantData.menu[1], restorantData.averageLunchPrice));
+
+// function transferWaitors(data) {
+//     const copy = Object.assign({}, data);
+
+//     copy.waitors[0] = {name: 'Mike', age: 32};
+//     return copy;
+// }
+
+// transferWaitors(restorantData);
+
+// function pow(x,n){
+//     if(n===1){
+//         return x;
+//     } else {
+//         return x*pow(x, n-1);
+//     }
+// }
+
+// console.log(pow(2,4))
+
+// let students ={
+//     js: [{
+//         name: 'Jonh',
+//         progress: 100
+//     },{
+//         name: 'Ivan',
+//         progress: 60
+//     }],
+//     html: {
+//         basic: [{
+//             name: 'Peter',
+//             progress: 20
+//         },{
+//             name: 'Ann',
+//             progress: 18
+//         }],
+//         pro: [{
+//             name: 'Sam',
+//             progress: 10
+//         }],
+//         semi: {
+//             students: [{
+//                 name: 'Test',
+//                 progress: 100
+//             }],
+
+//         }
+//     }
+// };
+
+// function getTotalProgressByIteration (data) {
+//     let total =0;
+//     let students=0;
+
+//     for (const course of Object.values(data)) {
+//         if (Array.isArray(course)){
+//             students+=course.length;
+            
+//             for (let i= 0; i<course.length; i++) {
+//                 total+=course[i].progress;   
+//             }
+//         } else{
+//             for (const subCourse of Object.values(course)) {
+//                 students+=subCourse.length;
+//                 for (let i= 0; i<subCourse.length; i++) {
+//                     total+=subCourse[i].progress;   
+//                 }
+
+//     }
+//         }
+//     }
+
+
+//     return total/students;
+// }
+
+// console.log(getTotalProgressByIteration(students))
+
+// function getTotalProgressByRecursion (data) {
+//     if (Array.isArray(data)){
+//         let total=0;
+        
+//         for (let i= 0; i<data.length; i++) {
+//             total+=data[i].progress;
+//         }
+//         return [total,data.length];
+//     } else {
+//         let total= [0, 0];
+
+//         for (const subData of Object.values(data)) {
+//             const subDataArr=getTotalProgressByRecursion(subData);
+//             total[0]+=subDataArr[0];
+//             total[1]+=subDataArr[1];
+//         }
+//         return total;
+//     }
+// }
+// const result = getTotalProgressByRecursion(students);
+// console.log(result[0]/result[1]);
+
+// function factorial(n) {
+//     if (typeof(n) !== 'number' || !Number.isInteger(n)){
+//         return 'Введите целое число';
+//     } else if (n <= 0 ) {
+//         return 1;
+//     } else {
+//         return n*factorial(n-1);
+//     }
+    
+// }
+// console.log(factorial('kkk'));
