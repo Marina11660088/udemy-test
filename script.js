@@ -661,14 +661,14 @@
 // const result = getTotalProgressByRecursion(students);
 // console.log(result[0]/result[1]);
 
-// function factorial(n) {
-//     if (typeof(n) !== 'number' || !Number.isInteger(n)){
-//         return 'Введите целое число';
-//     } else if (n <= 0 ) {
-//         return 1;
-//     } else {
-//         return n*factorial(n-1);
-//     }
+function factorial(n) {
+    if (typeof(n) !== 'number' || !Number.isInteger(n)){
+        return 'Введите целое число';
+    } else if (n <= 0 ) {
+        return 1;
+    } else {
+        return n*factorial(n-1);
+    }
     
-// }
-// console.log(factorial('kkk'));
+}
+console.log(factorial(4));
